@@ -2,9 +2,15 @@
 Self-Driving Car Engineer Nanodegree Program
 # My Results
 ![](PID.png)
+
+# Describes the effect of the P, I, D component of the PID algorithm in implementation
+1.The proportional portion of the controller tries to steer the car toward the Road center. The Control signal is in proportion to the cte(cross track error). If only using the 'P' part, the car overshoots the Road center very easily.
+2.The differential portion can observe the rate of the cte, it is useful to reduce the overshoot problem.
+3.The integral portion is used to eliminate a possible bias on the control system.
+
 # Discusses how to chose the final hyperparameters (P, I, D coefficients).
 ---
-The final hyperparameters (P,I,D) are chosen by manual tuning. Since the final target is to make the cte as smaller as zero. Firstly, I try to add 'P' to control the cte, but I found the car starts overshooting and ran out of the road. Secondly, 'D' was used to overcome the overshooting. Thirdly, the 'I' I set 0.001 to reduce the Accumulated error. Actually, I = 0. also worked! The final parameters of [P I D] is [0.2, 0.001, 2.8]
+The final hyperparameters (P,I,D) are chosen by manual tuning. Since the final target is to make the cte as smaller as zero. Firstly, I try to add 'P' to control the cte, but I found the car starts overshooting and ran out of the road. Secondly, 'D' was used to overcome the overshooting. Thirdly, the 'I' I set 0.001 to reduce the Accumulated error or eliminate the bias on the control system. Actually, I = 0. also worked! The final parameters of [P I D] is [0.2, 0.001, 2.8]
 
 ## Dependencies
 
