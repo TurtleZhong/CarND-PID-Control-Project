@@ -2,8 +2,9 @@
 Self-Driving Car Engineer Nanodegree Program
 # My Results
 ![](PID.png)
-
+# Discusses how to chose the final hyperparameters (P, I, D coefficients).
 ---
+The final hyperparameters (P,I,D) are chosen by manual tuning. Since the final target is to make the cte as smaller as zero. Firstly, I try to add 'P' to control the cte, but I found the car starts overshooting and ran out of the road. Secondly, 'D' was used to overcome the overshooting. Thirdly, the 'I' I set 0.001 to reduce the Accumulated error. Actually, I = 0. also worked! The final parameters of [P I D] is [0.2, 0.001, 2.8]
 
 ## Dependencies
 
